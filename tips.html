@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Some Tips</title>
+		
+<style type="text/css">
+a{
+	text-decoration: none;
+}
+h3{
+	text-align: center;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: cyan;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: blue;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0% 25%;
+}
+
+input[type=button] {
+	float: right;
+    background-color: cyan;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: blue;
+}
+
+</style>
+
+	</head>
+	<body>
+<h3>反馈表单</h3>
+
+<div class="container">
+  <form action="">
+    <label for="cname">联系人</label>
+    <input type="text" id="cname" name="cname" placeholder="请输入姓名..">
+
+    <label for="email">邮箱</label>
+    <input type="text" id="email" name="email" placeholder="请输入邮箱..">
+
+    <label for="country">城市</label>
+    <select id="country" name="country">
+      <option value="Beijing">北京</option>
+      <option value="Shanghai">上海</option>
+      <option value="Shenzhen">深圳</option>
+    </select>
+
+    <label for="subject">反馈信息</label>
+    <textarea id="subject" name="subject" placeholder="反馈内容.." style="height:200px"></textarea>
+
+    <input type="submit" value="提交">
+    <input type="button" onclick="javascript:history.go(-1);" value="返回">
+    
+  </form>
+</div>
+	</body>
+</html>

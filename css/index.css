@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/*超链接去除下划线*/
+a{
+	text-decoration: none;
+}
+li{list-style: none;}
+/*头部*/
+.top {
+	padding: 30px;
+  	background-color: salmon;
+  	background-size: contain;
+}
+ 
+.top h1 {
+  	font-size: 50px;
+  	text-align: center;
+}
+/* 导航 */
+.header {
+    overflow: hidden;
+    background-color:brown;
+}
+
+/* 导航栏样式 */
+.header a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.header a.right{
+	float: right;
+}
+
+/* 右侧搜索栏*/
+.header input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+ 
+/* 鼠标移动到链接的颜色 */
+.header a:hover{
+    background-color: #000000;
+    color: red;
+}
+.header a.active {
+    color: white;
+    background-color: red;
+}
+/*二维码定位*/
+.wechat{	
+	position:fixed;
+	top:70%;
+	right:5px;
+	width: 100px;
+	height: 100px;
+	background-color: #CCCCCC;
+}
+.wechat img{
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+}
+
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/*左边*/
+.meun {
+    -ms-flex: 20%; /* IE10 */
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.meun ul{
+	background-color: bisque;
+	margin: 0;
+    padding: 20px 30px 20px 30px;
+    width: 100%; 
+    overflow: hidden; 
+}
+.meun li { 
+	border-radius: 25px;
+	background:red;
+	transition:width 1s;
+	-webkit-transition:width 1s; /* Safari */
+	
+	/*float: left;*/ 
+	width: 70%; height: 66px; 
+	margin: 10px 0 10px; 
+	border: 1px solid #fff; 
+	background: salmon; color: #fff; 
+	text-align: center; cursor: pointer;
+	}
+
+.meun li h2 { 
+	font-size: 20px; 
+	padding-top: 5px; 
+	}
+.meun .active { 
+	width: 100%;
+	border: 1px solid #424242; 
+	background: #fff; color: #e84a7e; 
+	}
+
+/*右边栏*/
+.neirong{
+	-ms-flex: 80%; /* IE10 */
+    flex: 80%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    background-color: #eae9e9;
+}
+#word_img
+{
+  opacity:0.4;
+  filter:alpha(opacity=40); /*  IE8 及其更早版本 */
+}
+#word_img:hover
+{
+  opacity:1.0;
+  filter:alpha(opacity=100); /* IE8 及其更早版本 */
+}
+
+/*照片的设置*/
+.images img{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 30%;
+    height:200px;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.images img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+/*时钟的设置*/
+#clock img{
+	 background-color: #666666; 
+	 color: white;
+}
+/*年历*/
+
+	#rili { font-family: arial; }	
+	
+	#rili { width: 300px; margin: 50px auto 0; padding: 10px 10px 20px 20px; background: #eae9e9; }
+	#rili ul { width: 300px; overflow: hidden; padding-bottom: 10px; }
+	#rili li { float: left; width: 60px; height: 60px; margin: 10px 10px 0 0; border: 1px solid #fff; background: #424242; color: #fff; text-align: center; cursor: pointer; }
+	#rili li h2 { font-size: 15px; padding-top: 0px; }
+	#rili li p { font-size: 12px; }
+	
+	#rili .move { border: 1px solid #424242; background: #fff; color: #e84a7e; }
+	#rili .move h2 { }
+	#rili .move p { font-weight: bold; }
+	
+	/*#rili h2 {font-size: 14px; margin-bottom: 10px; }
+	#rili h1 { font-size: 12px; line-height: 15px; }*/
+
+/*留言*/
+
+/*底部*/
+.footer {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.footer a {
+	color: white;
+    text-align: center;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 300px) {
+    .header a {
+        float: none;
+        width: 100%;
+    }
+    .header input[type=text]{
+    	float: none;
+        width: 100%;
+    }
+}
